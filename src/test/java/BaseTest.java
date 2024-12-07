@@ -10,6 +10,9 @@ import org.testng.annotations.Parameters;
 public class BaseTest {
     @BeforeTest
     @Parameters({"browserType"})
+
+    //IM HERE
+    //IM NEW
     public void setUp(@Optional("firefox")String browserType) {
         if (browserType.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
