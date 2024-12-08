@@ -29,4 +29,5 @@ public class BaseTest {
         Configuration.assertionMode = AssertionMode.STRICT;
         Configuration.holdBrowserOpen = true;
     }
+    //im new
 }
