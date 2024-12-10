@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SelenideTests2 extends BaseTest{
+public class SelenideTests2 extends ConfigTest{
     SoftAssert sfa = new SoftAssert();
 
     @Test
@@ -94,7 +94,7 @@ public class SelenideTests2 extends BaseTest{
 
 
     //აქ თვითონ არ ვიცი რა მიწერია და რა არა :((
-    @Test
+    @Test(description = "This is a sample test description")
     public void validateOrderMechanics() throws InterruptedException {
         open(Constants.TELERIK_URL);
         $(byText("Pricing")).click();
