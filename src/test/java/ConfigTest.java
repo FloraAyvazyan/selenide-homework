@@ -5,7 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
-//კარგი imagination არ მაქვს დდ
+
 public class ConfigTest {
     @BeforeSuite
     public void initialSetup(){
