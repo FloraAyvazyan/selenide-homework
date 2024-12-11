@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
+
+@Test(groups = {"Selenide 1"})
 public class SelenideTests extends ConfigTest{
 
     @Test
@@ -129,7 +131,7 @@ public class SelenideTests extends ConfigTest{
 
 
 
-    @Test
+    @Test(groups = {"CheckBoxes-FrontEnd"})
     public void checkBoxTest(){
         open(Constants.CHECKBOXES_URL);
         // - Set first checkbox selected
@@ -140,7 +142,7 @@ public class SelenideTests extends ConfigTest{
 
 
 
-    @Test
+    @Test(groups = {"dropDown-FrontEnd"}, priority = 3)
     public void dropDownTest(){
         open(Constants.DROPDOWN_URL);
         SelenideElement dropdown =  $("#dropdown");

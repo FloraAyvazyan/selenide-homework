@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AllTestSuite">
+    <listeners>
+        <listener class-name="Listeners.ReportListener" />
+        <listener class-name="Listeners.SuiteListener" />
+        <listener class-name="Listeners.TestListener" />
+    </listeners>
+
+    <test name="GroupTest">
+        <groups>
+            <define name="Selenide 1"/>
+            <define name="Selenide 2"/>
+            <define name="all">
+                <include name="Selenide 1"/>
+                <include name="Selenide 2"/>
+            </define>
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SelenideTests"/>
+            <class name="SelenideTests2"/>
+        </classes>
+    </test>
+
+
+    <test name="endingWithFrontendTest" thread-count="6" parallel="classes">
+        <groups>
+            <run>
+                <include name=".*FrontEnd"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SelenideTests"/>
+            <class name="SelenideTests2"/>
+        </classes>
+    </test>
+
+</suite>
