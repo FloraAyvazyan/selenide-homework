@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SelenideTests extends BaseTest{
+public class SelenideTests extends ConfigTest{
 
     @Test
     public void validateBundleOffers() {
