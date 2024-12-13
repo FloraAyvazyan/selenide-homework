@@ -1,3 +1,5 @@
+import RetryAnotation.RetryAnalyzer;
+import RetryAnotation.RetryCount;
 import com.codeborne.selenide.*;
 import ge.tbcitacademy.data.Constants;
 import org.openqa.selenium.By;
@@ -12,6 +14,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
+
+@Test(groups = {"Selenide 2"})
 public class SelenideTests2 extends ConfigTest{
     SoftAssert sfa = new SoftAssert();
 
@@ -94,7 +98,9 @@ public class SelenideTests2 extends ConfigTest{
 
 
     //აქ თვითონ არ ვიცი რა მიწერია და რა არა :((
-    @Test(description = "This is a sample test description")
+    @RetryCount(count = 5)
+
+    @Test(description = "This is a sample test description", retryAnalyzer = RetryAnalyzer.class)
     public void validateOrderMechanics() throws InterruptedException {
         open(Constants.TELERIK_URL);
         $(byText("Pricing")).click();
