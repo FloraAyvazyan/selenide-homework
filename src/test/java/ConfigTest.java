@@ -1,5 +1,6 @@
 import com.codeborne.selenide.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,6 +8,7 @@ import org.testng.annotations.*;
 
 
 public class ConfigTest {
+
     @BeforeSuite
     public void initialSetup(){
         Configuration.timeout = 12000;
